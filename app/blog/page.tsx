@@ -1,5 +1,6 @@
-// ✅ Static Site Generation (SSG)
+import Link from "next/link";
 
+// ✅ Static Site Generation (SSG)
 interface Post {
   id: number;
   title: string;
@@ -21,12 +22,15 @@ export default async function BlogPage() {
     <div>
       <h1 className="text-3xl font-bold mb-4">Blog Posts</h1>
 
-      <ul className="space-y-4">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {posts.slice(0, 10).map((post) => (
           <li key={post.id} className="border p-4 rounded-lg shadow-sm">
-            <a href={`/blog/${post.id}`} className="text-xl font-semibold hover:underline">
+            <Link 
+              href={`/blog/${post.id}`} 
+              className="text-xl font-semibold hover:underline"
+            >
               {post.title}
-            </a>
+            </Link>
 
             <p className="text-gray-600">
               {post.body.substring(0, 80)}...
