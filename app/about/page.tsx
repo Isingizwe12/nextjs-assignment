@@ -1,4 +1,4 @@
-// ✅ This page uses SERVER-SIDE RENDERING (SSR)
+// This page uses SERVER-SIDE RENDERING (SSR)
 
 interface Author {
   name: string;
@@ -9,7 +9,7 @@ interface Author {
 
 async function getAuthor(): Promise<Author> {
   const res = await fetch("https://jsonplaceholder.typicode.com/users/1", {
-    cache: "no-store", // ✅ This forces SSR
+    cache: "no-store", //  This forces SSR
   });
 
   return res.json();

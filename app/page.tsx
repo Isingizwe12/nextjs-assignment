@@ -14,16 +14,18 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="space-y-4">
-      <h1 className="text-3xl font-bold">Welcome to Our Homepage</h1>
-
+    <div className="space-y-4 bg-green-100 h-screen text-center pt-8">
+    <div className="">
+      <h1 className="text-3xl font-bold">Welcome </h1>
+    
       <p className="text-lg">
-        Current Time (Client-Side Rendered):
+        Current Time
       </p>
 
       <p className="text-2xl font-semibold text-blue-600">
         {time}
       </p>
+      </div>
     </div>
   );
 }
